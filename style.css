@@ -1,0 +1,115 @@
+:root{
+    --main-radius: 5px;
+    --main-padding: 5px;
+    --charcoal: #212529;
+    --white: #F8F9FA;
+    --gray: #495057;
+
+}
+body{
+    background-color: var(--charcoal);
+}
+.container{
+    color:var(--white);
+    display:grid;
+    height:300vh;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .2fr 1fr 1fr 1fr .6fr .2fr;
+    gap:0.3rem;
+
+    grid-template-areas:
+    "nav nav"
+    "About Hobbies"
+    "Paper1 Paper2"
+    "Paper3 Paper4"
+    "Blog Blog"
+    "footer footer";
+
+
+}
+#nav{
+    
+    grid-area: nav;
+    background: var(--white);
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+#About{
+    grid-area: About;
+    text-align: center;
+    background: var(--white);
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+#Hobbies{
+    grid-area: Hobbies;
+    background: var(--white);
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+#Paper1{
+    grid-area: Paper1;
+    background: var(--white);
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+#Paper2{
+    grid-area: Paper2;
+    background: var(--white);
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+#Paper3{
+    grid-area: Paper3;
+    background: var(--white);
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+#Paper4{
+    grid-area: Paper4;
+    background: var(--white);
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+#Blog{
+    grid-area: Blog;
+    background: var(--white);
+    border-radius: var(--main-radius);
+    padding: 10px;
+}
+footer{
+    grid-area: footer;
+    background: var(--white);
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+    
+}
+.circle-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width:500px){
+
+    .container{
+        height: 300vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: .2fr 1fr 1fr 1fr 1fr 1fr .8fr .2fr;
+
+        grid-template-areas:
+        "nav"
+        "About"
+        "Hobbies"
+        "Paper1"
+        "Paper2"
+        "Paper3"
+        "Paper4"
+        "Blog"
+        "footer";
+    }
+
+}
